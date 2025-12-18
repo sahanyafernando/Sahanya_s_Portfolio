@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Sahanya's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html#home">Portfolio</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="articles.html" class="nav-link active">Articles</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Articles Header -->
+    <section class="articles-header">
+        <div class="container">
+            <h1 class="articles-title">My Articles</h1>
+            <p class="articles-subtitle">Thoughts, tutorials, and insights on web development, design, and technology</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section">
+        <div class="container">
+            <!-- Filter/Category Tabs -->
+            <div class="article-filters" id="article-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="tutorial">Tutorial</button>
+                <button class="filter-btn" data-filter="tips">Tips & Tricks</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid" id="articles-grid">
+                <!-- Article Card 1 -->
+                <article class="article-card" data-category="web-development tutorial">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="article-category-badge">Web Development</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 15, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 5 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-1">Building Modern Web Applications with React</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            Learn how to build scalable and maintainable web applications using React, 
+                            modern hooks, and best practices for component architecture.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-1" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card" data-category="design tips">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="article-category-badge">Design</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 10, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 3 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-2">The Art of Dark Mode Design</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            Exploring the principles of dark mode design, color theory, and how to create 
+                            beautiful interfaces that work in both light and dark themes.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-2" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>UI/UX</span>
+                                <span>Design</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card" data-category="web-development tutorial">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="article-category-badge">Web Development</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 5, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 7 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-3">RESTful API Design Best Practices</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            A comprehensive guide to designing RESTful APIs that are scalable, maintainable, 
+                            and follow industry best practices for naming conventions and structure.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-3" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>API</span>
+                                <span>Backend</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card" data-category="tips tutorial">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="article-category-badge">Tips & Tricks</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> February 28, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 4 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-4">10 JavaScript Tips Every Developer Should Know</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            Discover powerful JavaScript techniques and shortcuts that can improve your 
+                            code quality and productivity as a developer.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-4" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>JavaScript</span>
+                                <span>Tips</span>
+                                <span>Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="article-card" data-category="design web-development">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="article-category-badge">Design</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> February 20, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 6 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-5">Responsive Design: From Mobile to Desktop</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            Learn how to create truly responsive designs that work seamlessly across all 
+                            device sizes using modern CSS techniques and best practices.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-5" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>CSS</span>
+                                <span>Responsive</span>
+                                <span>Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="article-card" data-category="web-development tutorial">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="article-category-badge">Web Development</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> February 15, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 8 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            <a href="#article-6">Web Security Essentials for Developers</a>
+                        </h2>
+                        <p class="article-excerpt">
+                            Understanding common web vulnerabilities and how to protect your applications 
+                            from security threats. A guide to implementing security best practices.
+                        </p>
+                        <div class="article-footer">
+                            <a href="#article-6" class="article-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="article-tags">
+                                <span>Security</span>
+                                <span>Best Practices</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="load-more-btn">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sahanya. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/sahanya-fernando-94b7132b7/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sahanyafernando" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:sahanyafernando2@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="articles.js"></script>
+</body>
+</html>
+
