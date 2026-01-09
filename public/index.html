@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahanya - Portfolio</title>
+    <meta name="description" content="Sahanya Fernando - Computer Science & Engineering Undergraduate Portfolio">
+    <title>Sahanya Fernando | Computer Science & Engineering</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet" href="articles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <a href="#home">Portfolio</a>
+            <div class="nav-logo">
+                <a href="#home">Sahanya Fernando</a>
             </div>
-            <ul class="nav-menu" id="nav-menu">
+            <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="education.html" class="nav-link">Education</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="articles.html" class="nav-link">Articles</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#articles" class="nav-link">Articles</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon" id="theme-icon"></i>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
             </button>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,33 +45,46 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Home Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Sahanya Fernando</span>
-                </h1>
-                <p class="hero-subtitle">Computer Science & Engineering Undergraduate</p>
-                <p class="hero-description">
-                    I am an undergraduate at the Department of Computer Science and Engineering ,
-University of Moratuwa, Sri Lanka. I am passionate about combining mathematical
-reasoning with computer science to solve challenging real world problems. My
-Interests include specially mathematics, Data Science, Artificial Intelligence
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sahanya-fernando-94b7132b7/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/sahanyafernando" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:sahanyafernando2@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="greeting">Hello, I'm</span>
+                <span class="name">Sahanya Fernando</span>
+                <span class="title">Computer Science & Engineering Undergraduate</span>
+                <span class="title">in University of Moratuwa</span>
+            </h1>
+            <p class="hero-description">
+                Passionate about mathematics, programming and growing expertise in data science, machine learning and AI.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="Sahanya_CV.pdf" download="Sahanya_Fernando_CV.pdf" class="btn btn-secondary">Download CV</a>
+            </div>
+            <div class="social-links">
+                <a href="mailto:sahanyafernando2@gmail.com" class="social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sahanya-fernando-94b7132b7/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/sahanyafernando" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span></span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
         </div>
     </section>
 
@@ -70,34 +93,34 @@ Interests include specially mathematics, Data Science, Artificial Intelligence
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Welcome to my portfolio! I'm a passionate web developer with a keen eye for design
-                        and a love for creating exceptional digital experiences. I specialize in building
-                        responsive, user-friendly websites and web applications.
-                    </p>
-                    <p>
-                        With expertise in modern web technologies, I bring ideas to life through clean code
-                        and creative problem-solving. I'm always eager to learn new technologies and take
-                        on exciting challenges.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>30+</h3>
-                            <p>Happy Clients</p>
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <img src="my photo.jpeg" alt="Sahanya Fernando">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm Sahanya Fernando, a motivated Computer Science and Engineering undergraduate at the University of Moratuwa 
+                            with a strong passion for Mathematics, Data Science, NLP, Programming, Machine Learning, and Generative AI. 
+                        </p>
+                        <p>
+                            My work focuses on exploring data-driven and generative AI approaches to solve real-world problems,
+                            with an emphasis on algorithmic thinking, statistical learning, and scalable system design.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>Education</h3>
+                                <p>B.Sc. (Hons) in Computer Science & Engineering</p>
+                                <p>University of Moratuwa</p>
+                                <p>Second Year</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Focus Areas</h3>
+                                <p>ML & AI</p>
+                                <p>Data Science</p>
+                                <p>Software development</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="about-image">
-                    <img src="my photo.jpg" alt="Sahanya Fernando" class="profile-photo">
                 </div>
             </div>
         </div>
@@ -106,82 +129,22 @@ Interests include specially mathematics, Data Science, Artificial Intelligence
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>HTML/CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>JavaScript</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>React</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming Languages</h3>
+                    <p>Python, C/C++, Java, SQL</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Node.js</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Python</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Database</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Database Management</h3>
+                    <p>MySQL, RDBMS </p>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Responsive Design</span>
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">REST APIs</span>
-                    </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning and AI</h3>
+                    <p>Scikit-Learn, Pandas, Numpy, Matplotlib, Hugging Face Transformers, LLMs</p>
                 </div>
             </div>
         </div>
@@ -194,63 +157,396 @@ Interests include specially mathematics, Data Science, Artificial Intelligence
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-laptop-code"></i>
+                        <div class="project-placeholder">🌐</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Public Response Analysis - Self Project</h3>
+                        <p>Public Response Analysis is an end-to-end NLP project focused on analyzing multilingual public sentiment and thematic trends around government policies and events using simulated social media data.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>NLTK</span>
+                            <span>spaCy</span>
+                            <span>Transformers</span>
                         </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sahanyafernando/My_NLP_Learning" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">💡</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Supply Chain Management System - 3rd SGroup Project</h3>
+                        <p>This project is a web-based application for managing a supply chain, built with React and Vite for the frontend and an Express back end. It uses a MySQL database running in a Docker container.</p>
+                        <div class="project-tags">
+                            <span>Docker</span>
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://github.com/sheronjay/supply-chain-management-sys" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="page-header">
+        <div class="container">
+            <h1 class="page-title">Education</h1>
+            <p class="page-subtitle">My academic journey and achievements</p>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - Present</div>
+                        <h3 class="timeline-title">Bachelor of Science in Computer Science & Engineering</h3>
+                        <h4 class="timeline-subtitle">University of Moratuwa, Sri Lanka</h4>
+                        <p class="timeline-description">
+                            Currently pursuing undergraduate studies in Computer Science and Engineering. 
+                            Focused on combining mathematical reasoning with computer science to solve 
+                            challenging real-world problems. Special interests include Mathematics, 
+                            Data Science, and Artificial Intelligence.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Computer Science</span>
+                            <span>Mathematics</span>
+                            <span>Data Science</span>
+                            <span>Artificial Intelligence</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Project Title 1</h3>
-                        <p>Brief description of the project and technologies used.</p>
-                        <div class="project-tags">
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2020</div>
+                        <h3 class="timeline-title">G.C.E. Advanced Level</h3>
+                        <h4 class="timeline-subtitle">[Your School Name], Sri Lanka</h4>
+                        <p class="timeline-description">
+                            Completed Advanced Level examinations with focus on Mathematics, Physics, 
+                            and Chemistry. Achieved excellent results that led to admission to 
+                            University of Moratuwa.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Mathematics</span>
+                            <span>Physics</span>
+                            <span>Chemistry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2015 - 2017</div>
+                        <h3 class="timeline-title">G.C.E. Ordinary Level</h3>
+                        <h4 class="timeline-subtitle">[Your School Name], Sri Lanka</h4>
+                        <p class="timeline-description">
+                            Completed Ordinary Level examinations with outstanding results. 
+                            Laid the foundation for advanced studies in science and mathematics.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Science</span>
+                            <span>Mathematics</span>
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Academic Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Maintained high academic performance throughout university studies</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Research Projects</h3>
+                    <p>Active participation in research projects and academic competitions</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <p>Completed various online courses and certifications in Data Science and AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles-header">
+        <div class="container">
+            <h1 class="articles-title">My Articles</h1>
+            <p class="articles-subtitle">Thoughts, tutorials, and insights on web development, design, and technology</p>
+        </div>
+    </section>
+
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid">
+                <!-- Article Card 1 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="article-category-badge">Web Development</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 15, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 5 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            Building Modern Web Applications with React
+                        </h2>
+                        <p class="article-excerpt">
+                            Learn how to build scalable and maintainable web applications using React, 
+                            modern hooks, and best practices for component architecture.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="article-category-badge">Design</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 10, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 3 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            The Art of Dark Mode Design
+                        </h2>
+                        <p class="article-excerpt">
+                            Exploring the principles of dark mode design, color theory, and how to create 
+                            beautiful interfaces that work in both light and dark themes.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span>UI/UX</span>
+                                <span>Design</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-image-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="article-category-badge">Web Development</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> March 5, 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 7 min read
+                            </span>
+                        </div>
+                        <h2 class="article-title">
+                            RESTful API Design Best Practices
+                        </h2>
+                        <p class="article-excerpt">
+                            A comprehensive guide to designing RESTful APIs that are scalable, maintainable, 
+                            and follow industry best practices for naming conventions and structure.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span>API</span>
+                                <span>Backend</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="page-header">
+        <div class="container">
+            <h1 class="page-title">Experience</h1>
+            <p class="page-subtitle">My professional journey and projects</p>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">Software Development Intern</h3>
+                        <h4 class="timeline-subtitle">[Company Name]</h4>
+                        <p class="timeline-description">
+                            Working on developing scalable web applications using modern technologies. 
+                            Collaborating with cross-functional teams to deliver high-quality software 
+                            solutions. Gaining hands-on experience in full-stack development.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Developed and maintained web applications using React and Node.js</li>
+                            <li>Collaborated with team members using Git and agile methodologies</li>
+                            <li>Participated in code reviews and contributed to technical discussions</li>
+                        </ul>
+                        <div class="timeline-tags">
                             <span>React</span>
                             <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <div class="project-info">
-                        <h3>Project Title 2</h3>
-                        <p>Brief description of the project and technologies used.</p>
-                        <div class="project-tags">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3 class="timeline-title">Freelance Web Developer</h3>
+                        <h4 class="timeline-subtitle">Self-Employed</h4>
+                        <p class="timeline-description">
+                            Worked on various client projects, creating responsive and user-friendly 
+                            websites. Managed projects from conception to deployment, ensuring client 
+                            satisfaction and timely delivery.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Designed and developed responsive websites for multiple clients</li>
+                            <li>Implemented modern UI/UX designs with focus on user experience</li>
+                            <li>Optimized websites for performance and SEO</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>HTML/CSS</span>
                             <span>JavaScript</span>
-                            <span>CSS</span>
-                            <span>API</span>
+                            <span>UI/UX</span>
+                            <span>WordPress</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3 class="timeline-title">Research Assistant</h3>
+                        <h4 class="timeline-subtitle">University of Moratuwa</h4>
+                        <p class="timeline-description">
+                            Assisted in research projects related to Data Science and Machine Learning. 
+                            Contributed to data analysis, algorithm development, and research documentation.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Conducted data analysis and visualization using Python</li>
+                            <li>Assisted in developing machine learning models</li>
+                            <li>Prepared research reports and presentations</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span>
+                            <span>Data Science</span>
+                            <span>Machine Learning</span>
+                            <span>Research</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Project Title 3</h3>
-                        <p>Brief description of the project and technologies used.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Summary Section -->
+    <section class="skills-summary-section">
+        <div class="container">
+            <h2 class="section-title">Key Skills Gained</h2>
+            <div class="skills-summary-grid">
+                <div class="skill-category-card">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-code"></i>
                     </div>
+                    <h3>Frontend Development</h3>
+                    <p>React, JavaScript, HTML/CSS, Responsive Design</p>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Python, REST APIs, Database Management</p>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Python, Data Analysis, Machine Learning, Visualization</p>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Technologies</h3>
+                    <p>Git, VS Code, Agile, Project Management</p>
                 </div>
             </div>
         </div>
@@ -260,64 +556,62 @@ Interests include specially mathematics, Data Science, Artificial Intelligence
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Have a project in mind? Let's work together!</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>sahanyafernando2@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+94 70 398 1049</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Moratuwa, Sri Lanka</p>
-                        </div>
-                    </div>
+            <p class="contact-subtitle">
+                Have a project in mind or want to collaborate? I'd love to hear from you!
+            </p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading" style="display: none;">Sending...</span>
+                </button>
+                <div id="form-message" class="form-message"></div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Sahanya. All rights reserved.</p>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/sahanya-fernando-94b7132b7/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/sahanyafernando" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:sahanyafernando2@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <p>&copy; 2026 Sahanya Fernando. All rights reserved.</p>
+            <div class="footer-social-links">
+                <a href="mailto:sahanyafernando2@gmail.com" class="social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sahanya-fernando-94b7132b7/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/sahanyafernando" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#experience" class="nav-link">Experience</a>
             </div>
         </div>
     </footer>
