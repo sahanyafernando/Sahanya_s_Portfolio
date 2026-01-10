@@ -963,3 +963,47 @@ section {
     }
 }
 
+/* Typing Animation Styles */
+.typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--primary-color);
+    font-weight: 300;
+    animation: blink 1s infinite;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Ensure smooth typing animation - allow wrapping for hero description */
+.hero-title .name {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.hero-title .title {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.hero-description {
+    overflow: hidden;
+    min-height: 1.5em;
+}
+
+/* For section titles that wrap, allow wrapping after typing completes */
+.section-title,
+.page-title {
+    white-space: nowrap;
+    overflow: hidden;
+}
+

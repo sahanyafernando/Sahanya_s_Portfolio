@@ -188,19 +188,138 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Typing effect for hero name (optional enhancement)
-function typeWriter(element, text, speed = 100) {
+// Enhanced Typing Animation with Cursor
+function typeWriter(element, text, speed = 50, callback = null) {
     let i = 0;
     element.textContent = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    cursor.textContent = '|';
+    element.appendChild(cursor);
+    
     function type() {
         if (i < text.length) {
+            // Remove cursor, add character, add cursor back
+            element.removeChild(cursor);
             element.textContent += text.charAt(i);
+            element.appendChild(cursor);
             i++;
             setTimeout(type, speed);
+        } else {
+            // Remove cursor when done
+            if (element.contains(cursor)) {
+                element.removeChild(cursor);
+            }
+            if (callback) callback();
         }
     }
     type();
 }
+
+// Multi-text typing animation (cycles through multiple texts)
+function typeWriterMultiple(element, texts, speed = 50, deleteSpeed = 30, pauseTime = 2000) {
+    let textIndex = 0;
+    let isDeleting = false;
+    let charIndex = 0;
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    cursor.textContent = '|';
+    element.appendChild(cursor);
+    
+    function type() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            // Delete characters
+            if (charIndex > 0) {
+                element.removeChild(cursor);
+                element.textContent = currentText.substring(0, charIndex - 1);
+                element.appendChild(cursor);
+                charIndex--;
+                setTimeout(type, deleteSpeed);
+            } else {
+                // Move to next text
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            }
+        } else {
+            // Type characters
+            if (charIndex < currentText.length) {
+                element.removeChild(cursor);
+                element.textContent = currentText.substring(0, charIndex + 1);
+                element.appendChild(cursor);
+                charIndex++;
+                setTimeout(type, speed);
+            } else {
+                // Pause before deleting
+                isDeleting = true;
+                setTimeout(type, pauseTime);
+            }
+        }
+    }
+    type();
+}
+
+// Initialize typing animations
+document.addEventListener('DOMContentLoaded', () => {
+    // Hero name typing animation
+    const heroName = document.querySelector('.hero-title .name');
+    if (heroName) {
+        const originalText = heroName.textContent.trim();
+        typeWriter(heroName, originalText, 80);
+    }
+    
+    // Hero title - multiple titles typing animation
+    const heroTitles = document.querySelectorAll('.hero-title .title');
+    if (heroTitles.length > 0) {
+        // First title types normally
+        const firstTitle = heroTitles[0];
+        const firstTitleText = firstTitle.textContent.trim();
+        setTimeout(() => {
+            typeWriter(firstTitle, firstTitleText, 60);
+        }, 1000);
+        
+        // Second title types after first
+        if (heroTitles.length > 1) {
+            const secondTitle = heroTitles[1];
+            const secondTitleText = secondTitle.textContent.trim();
+            setTimeout(() => {
+                typeWriter(secondTitle, secondTitleText, 60);
+            }, 2000);
+        }
+    }
+    
+    // Hero description typing animation
+    const heroDescription = document.querySelector('.hero-description');
+    if (heroDescription) {
+        const originalText = heroDescription.textContent.trim();
+        setTimeout(() => {
+            typeWriter(heroDescription, originalText, 30);
+        }, 3000);
+    }
+    
+    // Section titles typing animation on scroll
+    const sectionTitles = document.querySelectorAll('.section-title, .page-title');
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('typed')) {
+                entry.target.classList.add('typed');
+                const originalText = entry.target.textContent.trim();
+                entry.target.textContent = '';
+                entry.target.style.display = 'inline-block';
+                typeWriter(entry.target, originalText, 50, () => {
+                    // After typing completes, restore normal display
+                    entry.target.style.display = '';
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    sectionTitles.forEach(title => {
+        titleObserver.observe(title);
+    });
+});
 
 // Add scroll reveal animation
 function revealOnScroll() {
